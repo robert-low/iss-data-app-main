@@ -1,12 +1,14 @@
-# Notes
+# RPF apprentice software engineer challenge
+
+# My notes
 
 ## An area for improvement:
 
 The endpoints successfully fetch API data, but do not currently handle any errors that might occur during this process.
-For example, if there is no data, or if the data is returned in a format that isn't json, then the app will error.
-This could potentially be resolved by using a conditional statement to check data exists, and then converting it to json.
 
-# RPF apprentice software engineer challenge
+For example, if there is no data, or if the data is returned in a format that isn't json, then the app will error.
+
+This could potentially be resolved by using a conditional statement to check data exists, and then converting it to json.
 
 This is a little application, written in [Ruby](https://ruby-lang.org), using the [Sinatra](https://sinatrarb.com/) framework. It allows users to see the whereabouts of the International Space Station, using the [OpenNotify APIs](http://api.open-notify.org/).
 
