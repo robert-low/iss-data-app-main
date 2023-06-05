@@ -4,10 +4,13 @@
 
 - `astros.erb`
   - I created this view page to display a table listing the names and crafts of the astronauts, as well as how many astronauts are in space.
-  - I needed to consider that the astronaut data is stored in an array of hashes e.g. {'people': [{ "craft": "ISS", "name": "Sergey Prokopyev" }, ...]}.
+  - I needed to consider that the astronaut data is stored in an array of hashes e.g. {'people': [{ "craft": "ISS", "name": "Sergey Prokopyev" }, ...]}, making it iterable.
 - `position.rb`
   - I amended this existing page to display the position of the ISS. I needed to consider that this data was stored in value with a hash as its data type e.g " { iss_position": { "longitude": "-3.4941", "latitude": "-37.5113" } }.
-  - I added in a hyperlink to return home, using the predefined get request to the index page, for ease.
+  - I added in a hyperlink to return home, using the predefined get request to the index page, for ease. I did the same to link to the JSON data.
+- `app.rb`
+  - I added an extra route to **/astros**, which makes a GET request using the OpenNotify#astros method, and displays the data as an enhanced Ruby HTML file.
+  - I added an extra route to **/iss_position.json**, which uses the OpenNotify#iss_now method to fetch and return the data as in json format.
 
 ## An area for improvement:
 
