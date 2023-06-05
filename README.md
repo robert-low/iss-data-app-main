@@ -7,10 +7,10 @@
   - I needed to consider that the astronaut data is stored in an array of hashes e.g. {'people': [{ "craft": "ISS", "name": "Sergey Prokopyev" }, ...]}, making it iterable.
 - `position.rb`
   - I amended this existing page to display the position of the ISS. I needed to consider that this data was stored in value with a hash as its data type e.g " { iss_position": { "longitude": "-3.4941", "latitude": "-37.5113" } }.
-  - I added in a hyperlink to return home, using the predefined get request to the index page, for ease. I did the same to link to the JSON data.
+  - I added in a hyperlink to return home, using the predefined route **/** to the index page, for ease. I did the same to link to the JSON data.
 - `app.rb`
-  - I added an extra route to **/astros**, which makes a GET request using the OpenNotify#astros method, and displays the data as an enhanced Ruby HTML file.
-  - I added an extra route to **/iss_position.json**, which uses the OpenNotify#iss_now method to fetch and return the data as in json format.
+  - I added an extra route to **/astros**, which makes a GET request that uses the OpenNotify#astros method, and displays the data as an enhanced Ruby HTML file.
+  - I added an extra route to **/iss_position.json**, which uses the OpenNotify#iss_now method to fetch and return the data in json format. I have optionally indicated that the content type is json, although as I understand it, Sinatra sets this to json automatically based on the response body, which is a json in this case.
 
 ## An area for improvement:
 
