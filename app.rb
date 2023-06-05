@@ -28,3 +28,15 @@ get '/astros' do
   # Render the astros.erb view.
   # Optionally, assign the astros data to 'data' for use in astros.erb
 end
+
+# Create endpoint to return ISS position as json
+#
+get '/iss_position.json' do
+  iss_now = OpenNotify.iss_now # Fetch the ISS position data, assign to variable
+
+  content_type :json
+  # Sets the response type to JSON, indicates response is in JSON.
+  # Not necessary in this case because by default, Sinatra sets the content type based on the response body (json file)
+
+  iss_now.to_json # Converts response to JSON and displays at the endpoint.
+end
