@@ -12,6 +12,8 @@
 - `app.rb`
   - I added an extra route to **/astros**, which makes a GET request that uses the OpenNotify#astros method, and displays the data as an enhanced Ruby HTML file.
   - I added an extra route to **/iss_position.json**, which uses the OpenNotify#iss_now method to fetch and return the data in json format. I have optionally indicated that the content type is json, although as I understand it, Sinatra sets this to json automatically based on the response body, which is json in this case.
+- `public/stylesheets/application.css`
+  - I added all CSS components and styling here. Images can be found in `public/images`
 
 ## An area for improvement:
 
