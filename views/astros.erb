@@ -1,5 +1,5 @@
 <h1>Who are the astronauts currently in space? 👩‍🚀</h1>
-<p>There are <strong><%= data["number"] %></strong> astronauts in space right now.</p>
+<p>There are <strong><%= data['number'] %></strong> astronauts in space right now.</p>
 
 <%# Data fetched from astros.json. Iterating through people key, value is array of hashes. %>
 <table>
@@ -10,10 +10,10 @@
     </tr>
   </thead>
   <tbody>
-    <% data["people"].each do |person| %>
+    <% data['people'].each do |person| %>
       <tr>
-        <td><%= person["name"]%></td>
-        <td><%= person["craft"] %></td>
+        <td><%= person['name']%></td>
+        <td><%= person['craft'] %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,3 +1,7 @@
 <h1>Where is the ISS? 🛰️</h1>
 <!-- TODO add in actual position here -->
+<p>
+  The the longitude of the ISS is <strong><%= data['iss_position']['longitude']%></strong>
+  and the latitude is <strong><%= data['iss_position']['latitude'] %></strong>.
+</p>
 <p>This observation was made at <%= Time.at(data['timestamp']) %>.</p>
