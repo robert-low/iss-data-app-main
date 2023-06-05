@@ -1,8 +1,9 @@
 # RPF apprentice software engineer challenge
 
 # My notes
-- `astros.erb` - I created this view page to display a table listing the names and crafts of the astronauts, as well as how many astronauts are in space.
-               - The data is in json format and I needed to consider that the astronaut data is stored in an array of hashes e.g. {'people': [{ "craft": "ISS", "name": "Sergey Prokopyev" }, ...]}
+- `astros.erb` 
+  - I created this view page to display a table listing the names and crafts of the astronauts, as well as how many astronauts are in space.
+  - I needed to consider that the astronaut data is stored in an array of hashes e.g. {'people': [{ "craft": "ISS", "name": "Sergey Prokopyev" }, ...]}.
 
 ## An area for improvement:
 
