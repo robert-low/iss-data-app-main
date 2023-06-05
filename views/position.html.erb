@@ -1,9 +1,25 @@
-<h1>Where is the ISS? 🛰️</h1>
-<!-- TODO add in actual position here -->
-<p>
-  The the longitude of the ISS is <strong><%= data['iss_position']['longitude']%></strong>
-  and the latitude is <strong><%= data['iss_position']['latitude'] %></strong>.
-</p>
-<p>This observation was made at <%= Time.at(data['timestamp']) %>.</p>
-<p><a href='http://localhost:4567/iss_position.json'> { View as JSON }</a></p>
-<p><a href='/'>Back to 🌎</a></p>
+<div class="centre-container">
+  <h1>Where is the ISS? 🛰️</h1>
+
+  <p>
+    The longitude of the ISS is <strong><%= data['iss_position']['longitude']%></strong>
+    and the latitude is <strong><%= data['iss_position']['latitude'] %></strong>.
+  </p>
+
+  <img class="yellow-squiggle" style="width: 460px; height: auto;"
+  src="/images/yellow_squiggle.jpg" alt="Yellow underline">
+
+  <p>
+    This observation was made on <%= Time.at(data['timestamp']).strftime("%m/%d/%Y")%>
+    at <%= Time.at(data['timestamp']).strftime("%I:%M%p") %>
+  </p>
+
+  <div class="btn-container">
+    <a class="json-btn" href='http://localhost:4567/iss_position.json'>View as JSON {}</a>
+  </div>
+
+  <div class="btn-container">
+    <a class="home-btn" href='/'>Back to 🏠</a>
+  </div>
+
+</div>
