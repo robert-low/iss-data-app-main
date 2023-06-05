@@ -1,6 +1,9 @@
 # RPF apprentice software engineer challenge
 
 # My notes
+- `astros.erb` 
+  - I created this view page to display a table listing the names and crafts of the astronauts, as well as how many astronauts are in space.
+  - I needed to consider that the astronaut data is stored in an array of hashes e.g. {'people': [{ "craft": "ISS", "name": "Sergey Prokopyev" }, ...]}.
 
 ## An area for improvement:
 
@@ -9,6 +12,13 @@ The endpoints successfully fetch API data, but do not currently handle any error
 For example, if there is no data, or if the data is returned in a format that isn't json, then the app will error.
 
 This could potentially be resolved by using a conditional statement to check data exists, and then converting it to json.
+
+
+
+
+#
+
+
 
 This is a little application, written in [Ruby](https://ruby-lang.org), using the [Sinatra](https://sinatrarb.com/) framework. It allows users to see the whereabouts of the International Space Station, using the [OpenNotify APIs](http://api.open-notify.org/).
 
