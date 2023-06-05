@@ -4,6 +4,8 @@
 - `astros.erb` 
   - I created this view page to display a table listing the names and crafts of the astronauts, as well as how many astronauts are in space.
   - I needed to consider that the astronaut data is stored in an array of hashes e.g. {'people': [{ "craft": "ISS", "name": "Sergey Prokopyev" }, ...]}.
+- `position.rb`
+  - I amended this existing page to display the position of the ISS. I needed to consider that this data was stored in value with a hash as its data type e.g " { iss_position": { "longitude": "-3.4941", "latitude": "-37.5113" } }.
 
 ## An area for improvement:
 
