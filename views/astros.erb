@@ -1,4 +1,10 @@
 <h1>Who are the astronauts currently in space? 👩‍🚀</h1>
+<p>There are <strong><%= data["number"] %></strong> astronauts in space right now.</p>
+
+<% data["people"].each do |person| %>
+  <%= person["name"]%>
+  <%= person["craft"] %>
+<% end %>
 
 
 <%#
