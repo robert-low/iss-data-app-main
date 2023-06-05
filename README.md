@@ -10,6 +10,13 @@ For example, if there is no data, or if the data is returned in a format that is
 
 This could potentially be resolved by using a conditional statement to check data exists, and then converting it to json.
 
+
+
+
+#
+
+
+
 This is a little application, written in [Ruby](https://ruby-lang.org), using the [Sinatra](https://sinatrarb.com/) framework. It allows users to see the whereabouts of the International Space Station, using the [OpenNotify APIs](http://api.open-notify.org/).
 
 The aim of the exercise is for you to demonstrate how you would talk through your code and design decisions to peers, and will be used as a prompt for further discussions. We won't ask you to write any code during the interview itself, but we might ask specific questions about the code that you show us and how you might approach work on additional features or changes.
