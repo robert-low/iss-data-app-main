@@ -1,11 +1,13 @@
 # RPF apprentice software engineer challenge
 
 # My notes
-- `astros.erb` 
+
+- `astros.erb`
   - I created this view page to display a table listing the names and crafts of the astronauts, as well as how many astronauts are in space.
   - I needed to consider that the astronaut data is stored in an array of hashes e.g. {'people': [{ "craft": "ISS", "name": "Sergey Prokopyev" }, ...]}.
 - `position.rb`
   - I amended this existing page to display the position of the ISS. I needed to consider that this data was stored in value with a hash as its data type e.g " { iss_position": { "longitude": "-3.4941", "latitude": "-37.5113" } }.
+  - I added in a hyperlink to return home, using the predefined get request to the index page, for ease.
 
 ## An area for improvement:
 
@@ -15,12 +17,7 @@ For example, if there is no data, or if the data is returned in a format that is
 
 This could potentially be resolved by using a conditional statement to check data exists, and then converting it to json.
 
-
-
-
 #
-
-
 
 This is a little application, written in [Ruby](https://ruby-lang.org), using the [Sinatra](https://sinatrarb.com/) framework. It allows users to see the whereabouts of the International Space Station, using the [OpenNotify APIs](http://api.open-notify.org/).
 

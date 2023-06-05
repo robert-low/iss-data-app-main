@@ -11,7 +11,7 @@ module OpenNotify
   # loads and parses the data
   #
   # Change this to 'yes' if you want to use the live data.
-  USE_LIVE_DATA = 'no'
+  USE_LIVE_DATA = 'yes'
 
   def iss_now
     fetch_data(api: 'iss-now')
@@ -25,7 +25,7 @@ module OpenNotify
   def fetch_data(api:)
     # OpenNotify#fetch_data retrieves data in JSON, either from the live API endpoint, or from the local data json files.
 
-    if USE_LIVE_DATA == 'yes'
+    if USE_LIVE_DATA == 'no'
       # Make an HTTP request to the URL using Faraday, a Ruby HTTP client library.
       # In the block, tell Faraday to parse the response as json.
       conn = Faraday.new('http://api.open-notify.org/') do |f|
