@@ -1,0 +1,101 @@
+h1 {
+  color: black;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bolder;
+  text-align: center;
+}
+
+p {
+  font-family: 'Open Sans';
+  font-size: 18px;
+}
+
+.home-btn {
+  color: white;
+  background-color: #0052cc;
+  border-radius: 4px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 900;
+}
+
+.home-btn:hover {
+  background-color: #1d6feaed;
+}
+
+.json-btn {
+  color: black;
+  border-radius: 4px;
+  background-color: #eeeeee;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 900;
+}
+
+.json-btn:hover {
+  background-color: #a9a9a9c4;
+  transition: 0.3s;
+}
+
+.btn-container {
+  margin: 24px;
+}
+
+.navbar {
+  background-color: #cd2355;
+  display: flex;
+  justify-content: flex-start;
+  padding: 30px;
+  border-radius: 15px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.btn-navbar {
+  background-color: #9a153d;
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 8px;
+}
+
+.btn-navbar:hover {
+  background-color: #6d112ccc;
+}
+
+.centre-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table th {
+  background-color: #0052cc;
+  color: white;
+}
+
+table th,
+td {
+  font-family: 'Nunito Sans', sans-serif;
+  padding: 12px;
+  text-align: center;
+  border-bottom: 2px solid #dddd;
+}
+
+table tr:hover {
+  background-color: #f36f22;
+  color: white;
+}

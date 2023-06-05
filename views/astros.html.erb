@@ -1,25 +1,34 @@
-<h1>Who are the astronauts currently in space? 👩‍🚀</h1>
-<p>There are <strong><%= data['number'] %></strong> astronauts in space right now.</p>
-
 <%# Data fetched from astros.json. Iterating through people key, value is array of hashes. %>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Craft</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% data['people'].each do |person| %>
+<div class="centre-container">
+  <h1>Who are the astronauts currently in space? 👩‍🚀</h1>
+
+  <p>There are <strong><%= data['number'] %></strong> astronauts in space right now.</p>
+
+  <table>
+    <thead>
       <tr>
-        <td><%= person['name']%></td>
-        <td><%= person['craft'] %></td>
+        <th>Name</th>
+        <th>Craft</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
-<a href='/'>Back to 🌎</a>
+    </thead>
+    <tbody>
+      <% data['people'].each do |person| %>
+        <tr>
+          <td><%= person['name']%></td>
+          <td><%= person['craft'] %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <img src="images/snowy.png" alt="snowy in space" style="width: 300px; height: auto; margin: 12px 12px">
+
+  <a class="home-btn" href='/'>Back to 🏠</a>
+
+</div>
+
+
+
 
 
 <%#
