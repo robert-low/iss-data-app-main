@@ -1,3 +1,6 @@
+<%# View page displaying location of ISS using #get /position in app.rb.
+%>
+
 <div class="centre-container">
   <h1>Where is the ISS? 🛰️</h1>
 
@@ -12,6 +15,7 @@
   <p>
     This observation was made on <%= Time.at(data['timestamp']).strftime("%m/%d/%Y")%>
     at <%= Time.at(data['timestamp']).strftime("%I:%M%p") %>
+    <%# #strftime for readability %>
   </p>
 
   <div class="btn-container">

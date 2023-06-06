@@ -19,24 +19,21 @@ get '/position' do
   erb :position, locals: { data: iss_now }
 end
 
-# Creates a route in Sinatra which responds to the /astros file.
+# Create route in Sinatra, fetches and stores astros data, renders in astros view.
 #
 get '/astros' do
-  astros = OpenNotify.astros # Fetch and save the data for astros.
+  astros = OpenNotify.astros
 
   erb :astros, locals: { data: astros }
-  # Render the astros.erb view.
   # Optionally, assign the astros data to 'data' for use in astros.erb
 end
 
-# Create endpoint to return ISS position as json
+# Endpoint to return ISS position as json
+# Fetch and save the data, optionally(?) indicate JSON response
+# Convert to JSON and direct to endpoint.
 #
 get '/iss_position.json' do
-  iss_now = OpenNotify.iss_now # Fetch the ISS position data, assign to variable
-
+  iss_now = OpenNotify.iss_now
   content_type :json
-  # Sets the response type to JSON, indicates response is in JSON.
-  # Not necessary in this case because by default, Sinatra sets the content type based on the response body (json file)
-
-  iss_now.to_json # Converts response to JSON and displays at the endpoint.
+  iss_now.to_json
 end

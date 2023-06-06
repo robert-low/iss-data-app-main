@@ -17,30 +17,31 @@ module OpenNotify
     fetch_data(api: 'iss-now')
   end
 
+  # Calls the fetch_data method below, with the .JSON file given as an argument.
+  #
   def astros
     fetch_data(api: 'astros')
-    # Calls the fetch_data method below, with the .JSON file given as an argument.
   end
 
+  # Retrieves data in JSON, either from the live API endpoint, or from the local data json files.
+  #
   def fetch_data(api:)
-    # OpenNotify#fetch_data retrieves data in JSON, either from the live API endpoint, or from the local data json files.
-
+    # Make an HTTP request to the URL using Faraday, a Ruby HTTP client library, parse as JSON.
+    #
     if USE_LIVE_DATA == 'yes'
-      # Make an HTTP request to the URL using Faraday, a Ruby HTTP client library.
-      # In the block, tell Faraday to parse the response as json.
       conn = Faraday.new('http://api.open-notify.org/') do |f|
         f.response :json
       end
 
-      return conn.get("#{api}.json").body # http://api.open-notify.org/live-endpoint.json
+      # GET request to API endpoint, return the response object as a string.
       #
-      # Make a GET request to the OpenNotify API which specifies the endpoint in documentation (iss-now or astros)
-      # Extract the response body as a string.
-      # .body returns the response object as a string, hence the "no implicit conversion of array into string error"
+      return conn.get("#{api}.json").body # 'http://api.open-notify.org/#{live-endpoint-here}.json'
     end
 
-    filepath = File.join(BASE_DIR, 'data', "#{api}.json") # File path of API endpoint -> '/data/'file-endpoint.json'
-    JSON.parse(File.read(filepath)) # Read and return the parsed data from the file.
+    # If local file, then below is executed, with endpoint -> '/data/'#{file-endpoint-here}.json'
+    #
+    filepath = File.join(BASE_DIR, 'data', "#{api}.json")
+    JSON.parse(File.read(filepath))
   end
 
   module_function :iss_now, :astros, :fetch_data
